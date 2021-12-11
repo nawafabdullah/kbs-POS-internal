@@ -2,9 +2,11 @@
   "name": "expresdemo",
   "version": "1.0.0",
   "description": "",
-  "main": "mainServer.js",
+  "main": "make",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon internalServer.js",
+    "build": "nexe internalServer.js"
   },
   "author": "Nawaf A H",
   "license": "ISC",
@@ -28,6 +30,7 @@
     "jwks-rsa": "^1.12.2",
     "mongodb": "^3.6.3",
     "morgan": "^1.10.0",
+    "nexe": "^4.0.0-beta.19",
     "prompt": "^1.1.0",
     "request": "^2.88.2",
     "stringify-object": "^3.3.0"
