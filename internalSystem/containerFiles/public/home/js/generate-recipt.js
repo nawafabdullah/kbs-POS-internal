@@ -11,7 +11,7 @@ let data = require("../../../../../mongoDB/containerFiles/Models/recipt-model");
 
 //const resourcesPath = "%USERPROFILE%\Desktop";
 
-const resourcesPath = "../../recipts/";
+const resourcesPath = "../recipts/";
 
 //async function GenerateRecipt(invoiceNumber, invoiceDate, items) {
 
@@ -29,7 +29,7 @@ async function GenerateRecipt(invoiceData) {
         data.marginLeft = 25;
         data.marginBottom = 25;
         data.sender = {
-            company: "مركز خالد عمر بن صديق",
+            company: "مؤسسة خالد عمر بن صديق للأقمشة",
             address: " طريق الملك فهد",
             zip: "",
             city: "الرياض",
@@ -62,7 +62,7 @@ async function GenerateRecipt(invoiceData) {
         */
 
         data.client = {
-            "company": "VAT REGISTRATION: 3101589211",
+            "company": "VAT REGISTRATION: 310158921100003",
             "address": "",
             "zip": "",
             "city": "",
@@ -76,10 +76,10 @@ async function GenerateRecipt(invoiceData) {
         //}
         //]
 
-        data.bottomNotice = "شكرا لزيارتكم مركز خالد عمر بن صديق";
+        //data.bottomNotice = "شكرا لزيارتكم معرض خالد عمر بن صديق";
 
 
-        console.log(data);
+        //console.log(data);
 
 
         const result = await easyinvoice.createInvoice(data);

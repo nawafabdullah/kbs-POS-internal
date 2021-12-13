@@ -50,22 +50,6 @@ router.route("/")
     .get(async function (req, res) {
         res.render("sell-products", { response: "النظام يعمل بشكل طبيعي" });
     })
-
-    .post(async function (req, res) {
-        //console.log("SOLD::::: " + req.body.productCode[1]);
-        const successMessage = "تم البيع بنجاح";
-        let serverResponse = await MakeSales(req.body);
-        console.log("Server Response is:::::: " + serverResponse);
-
-        if (serverResponse == true) {
-            res.render("success", { message: successMessage });
-            //res.send("success");
-        } else {
-            res.render("sell-products", { response: serverResponse });
-        }
-
-    })
-
 router.route("/success")
     .get(async function (req, res) {
         res.render("success");
